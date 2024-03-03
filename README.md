@@ -1,6 +1,6 @@
 
-# cboor-app
-## How it works
+## cboor-app
+
 
 Fork or download the repo and change whatever you need to change for your needs.
 
@@ -13,3 +13,9 @@ npm install
 npm run dev
 ```
 
+  * 18.18.2 (Currently using 64-bit executable)  
+
+  
+```bash
+  * 18.18.2 (Currently using 64-bit executable)  
+```
