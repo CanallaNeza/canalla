@@ -1,59 +1,63 @@
-"use client" // this is a client component
-import React from "react"
-import Image from "next/image"
-import { Link } from "react-scroll/modules"
-import { HiArrowDown } from "react-icons/hi"
+// Utilizamos "use client" para indicar que este es un componente del lado del cliente
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { Link } from 'react-scroll/modules';
+import { HiArrowDown } from 'react-icons/hi';
 
 const HeroSection = () => {
   return (
-    <section id="home">
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2 md:w-1/2">
+    <>
+      <section
+        id='home'
+        className='flex flex-col items-center justify-center my-10 py-16 text-center animate-fadeIn animation-delay-2 sm:py-32 md:flex-row md:space-x-4  md:text-left'>
+        <div className='flex-shrink-0 md:w-1/2 lg:flex lg:justify-center'>
           <Image
-            src="/headshot.png"
-            alt=""
+            src='/head.gif' // Reemplaza "/miImagen.png" con la ruta a tu imagen de perfil
+            alt='Carlos Armando Boyzo Oregón, Diseñador UX y Desarrollador Front End'
             width={325}
             height={325}
-            className="rounded-full shadow-2xl"
+            className='rounded-full shadow-2xl'
+            priority // Esto asegura que la imagen se cargue con prioridad
           />
         </div>
-        <div className="md:mt-2 md:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">Hi, I&#39;m Hosna!</h1>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
-            I&#39;m a{" "}
-            <span className="font-semibold text-teal-600">
-              Software Engineer{" "}
-            </span>
-            based in Los Angeles, CA. Working towards creating software that
-            makes life easier and more meaningful.
+        <div className='md:w-3/5'>
+          <h1 className='mt-6 text-4xl font-bold md:mt-0 md:text-4xl'>
+            ¡Hola, soy Carlos Armando Boyzo Oregón!
+          </h1>
+          <p className='mt-4 mb-6 text-lg md:text-2xl'>
+            Soy un{' '}
+            <span className='font-semibold text-teal-600'>
+              Diseñador UX y Desarrollador Front End
+            </span>{' '}
+            con una pasión por integrar el arte en la tecnología, creando
+            experiencias digitales únicas que mejoran la vida de las personas.
           </p>
           <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            activeClass="active"
+            to='projects'
+            className='inline-block px-6 py-3 text-neutral-100 bg-teal-600 rounded shadow font-semibold hover:bg-teal-700 transition-colors duration-300 ease-in-out'
+            activeClass='active'
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
-            Projects
+            duration={500}>
+            Conoce más
           </Link>
         </div>
-      </div>
-      <div className="flex flex-row items-center text-center justify-center ">
+      </section>
+      <div className='my-10 py-16 flex flex-row items-center text-center justify-center '>
         <Link
-          to="about"
-          activeClass="active"
+          to='about'
+          activeClass='active'
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className="animate-bounce" />
+          duration={500}>
+          <HiArrowDown size={35} className='animate-bounce' />
         </Link>
       </div>
-    </section>
-  )
-}
+    </>
+  );
+};
 
-export default HeroSection
+export default HeroSection;
