@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+// Define tus habilidades
 const skills = [
   { skill: 'HTML' },
   { skill: 'CSS' },
@@ -20,49 +21,44 @@ const AboutSection = () => {
     <section id='about'>
       <div className='my-12 pb-12 md:pt-16 md:pb-48'>
         <h1 className='text-center font-bold text-4xl'>
-          About Me
+          Acerca de mí
           <hr className='w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded'></hr>
         </h1>
 
         <div className='flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left'>
           <div className='md:w-1/2 '>
             <h1 className='text-center text-2xl font-bold mb-6 md:text-left'>
-              Get to know me!
+              ¡Conóceme!
             </h1>
             <p>
-              Hi, my name is Carlos Boyzo Oregón and I am a{' '}
-              <span className='font-bold'>{'highly ambitious'}</span>,
-              <span className='font-bold'>{' self-motivated'}</span>, and
-              <span className='font-bold'>{' driven'}</span> software engineer
-              based in Los Angeles, CA.
+              Hola, mi nombre es Carlos Boyzo Oregón y soy un ingeniero de software{' '}
+              <span className='font-bold'>altamente ambicioso</span>,
+              <span className='font-bold'> auto motivado</span>, y
+              <span className='font-bold'> apasionado</span> con sede en México.
             </p>
             <br />
             <p>
-              I graduated from California State University, Northridge in 2019
-              with a BS in Computer Engineering and have been working in the
-              field ever since.
+              Me gradué de la Universidad Estatal de California, Northridge en 2019
+              con una Licenciatura en Ingeniería Informática y he estado trabajando en
+              el campo desde entonces.
             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling, to making YouTube videos,
-              I am always seeking new experiences and love to keep myself
-              engaged and learning new things.
+              Tengo una amplia gama de pasatiempos y pasiones que me mantienen ocupado.
+              Desde leer, practicar deportes, viajar, hasta hacer videos en YouTube,
+              siempre estoy buscando nuevas experiencias y me encanta mantenerme
+              comprometido y aprender cosas nuevas.
             </p>
             <br />
             <p>
-              I believe that you should{' '}
-              <span className='font-bold text-teal-500'>
-                never stop growing
-              </span>{' '}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+              Creo que nunca debes dejar de crecer y eso es lo que me esfuerzo por hacer.
+              Tengo una pasión por la tecnología y un deseo de siempre empujar los límites
+              de lo que es posible. Estoy emocionado de ver a dónde me lleva mi carrera y
+              siempre estoy abierto a nuevas oportunidades. 🙂
             </p>
           </div>
           <div className='text-center md:w-1/2 md:text-left'>
-            <h1 className='text-2xl font-bold mb-6'>My Skills</h1>
+            <h1 className='text-2xl font-bold mb-6'>Mis Habilidades</h1>
             <div className='flex flex-wrap flex-row justify-center z-10 md:justify-start'>
               {skills.map((item, idx) => {
                 return (

@@ -6,6 +6,7 @@ import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import { IconType } from 'react-icons';
 import { FaHome } from 'react-icons/fa';
+import cboLogo from '/cbo-logo.png'; // Importa la imagen
 
 interface NavItem {
   label: string;
@@ -33,17 +34,24 @@ export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const [navbar, setNavbar] = useState(false);
-  const [isMounted, setIsMounted] = useState(false); // Mover esta línea dentro del componente
 
-  useEffect(() => {
-    setIsMounted(true); // Se establecerá a true una vez que el componente se haya montado
-  }, []);
-
-  // Función para cambiar el tema
   const toggleTheme = () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
   };
+  const themeButton =
+    currentTheme === 'dark' ? (
+      <button
+        onClick={() => setTheme('light')}
+        className='bg-gray-100 p-2 rounded-xl relative'>
+        <RiSunLine size={25} color='black' />
+      </button>
+    ) : (
+      <button onClick={toggleTheme} className='p-2 rounded-xl'>
+        <RiMoonFill size={25} />
+      </button>
+    );
+  // Función para cambiar el tema
 
   return (
     <header className='w-full mx-auto p-2 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-950 '>
@@ -56,7 +64,12 @@ export default function Navbar() {
               }`}>
               <Link to='home'>
                 <div className='container flex items-center space-x-2'>
-                  <h2 className='text-2xl font-bold'>Carlos Boyzo Oregón</h2>
+                  <img
+                    src='/cbo-logo.png'
+                    alt='CBO Logo'
+                    className='h-4 w-auto'
+                  />{' '}
+                  {/* Reemplaza h2 con img */}
                 </div>
               </Link>
               <div className='md:hidden'>
@@ -92,19 +105,8 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-
-              {isMounted &&
-                (currentTheme === 'dark' ? (
-                  <button
-                    onClick={() => setTheme('light')}
-                    className='bg-gray-100 p-2 rounded-xl relative'>
-                    <RiSunLine size={25} color='black' />
-                  </button>
-                ) : (
-                  <button onClick={toggleTheme} className='p-2 rounded-xl'>
-                    <RiMoonFill size={25} />
-                  </button>
-                ))}
+              {/* boton de tema de color  */}
+              {themeButton}
             </div>
           </div>
         </div>

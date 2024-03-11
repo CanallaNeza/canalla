@@ -5,3 +5,11 @@
 a {
   cursor: pointer;
 }
+.theme-button {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.theme-button-mounted {
+  opacity: 1;
+}
