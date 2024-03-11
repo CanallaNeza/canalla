@@ -1,12 +1,12 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#38037f",
     "activityBar.background": "#38037f",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#8a049c",
+    "activityBarBadge.background": "#9c4504",
     "activityBarBadge.foreground": "#e7e7e7",
     "commandCenter.border": "#e7e7e799",
     "sash.hoverBorder": "#38037f",
