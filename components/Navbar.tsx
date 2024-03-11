@@ -46,7 +46,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className='w-full mx-auto p-3 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-950 dark:border-b dark:border-stone-600'>
+    <header className='w-full mx-auto p-2 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-950 '>
       <div className='justify-between md:items-center md:flex'>
         <div>
           <div className='section'>

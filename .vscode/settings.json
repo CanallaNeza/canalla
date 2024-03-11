@@ -20,5 +20,8 @@
     "titleBar.inactiveBackground": "#22024d99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#22024d"
+  "peacock.color": "#22024d",
+  "cSpell.words": [
+    "tailwindcss"
+  ]
 }
