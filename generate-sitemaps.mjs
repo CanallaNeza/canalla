@@ -1,7 +1,7 @@
-// generate-sitemap.js
+// generate-sitemaps.mjs
 
-const fs = require('fs');
-const globby = require('globby');
+import fs from 'fs';
+import { globby } from 'globby';
 
 (async () => {
   const pages = await globby([
@@ -10,20 +10,20 @@ const globby = require('globby');
     '!pages/api',
     // Añade o elimina patrones según las necesidades de tu proyecto
   ]);
-
+  console.log(pages);
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${pages
         .map((page) => {
           const path = page
-            .replace('pages', '')
+            .replace('pages/', '')
             .replace('.tsx', '')
             .replace('/index', '');
-          const route = path === '/index' ? '' : path;
+          const route = path === 'index' ? '' : path;
           return `
             <url>
-              <loc>${`https://tudominio.com${route}`}</loc>
+              <loc>${`https://canallaneza.art${route}`}</loc>
             </url>
           `;
         })
