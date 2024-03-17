@@ -16,7 +16,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='dark:bg-gray-950'>
+      <body className='dark:bg-slate-50'>
         <ThemeProvider enableSystem={true} attribute='class'>
         
           {children}
