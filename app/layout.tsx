@@ -17,8 +17,15 @@ export default function RootLayout({
       */}
       <head />
       <body className='dark:bg-slate-50'>
+        <iframe
+          title='tag'
+          src='https://www.googletagmanager.com/ns.html?id=GTM-PTS5B9XF'
+          height={0}
+          width={0}
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+
         <ThemeProvider enableSystem={true} attribute='class'>
-        
           {children}
           <Footer />
         </ThemeProvider>
