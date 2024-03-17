@@ -1,15 +1,15 @@
 import React from "react";
 import {
-  AiOutlineGithub,
+
   AiOutlineLinkedin,
-  AiOutlineYoutube,
+  AiOutlineFacebook,
+  AiOutlineInstagram,
 } from "react-icons/ai";
 
 // Definimos un array para los íconos de redes sociales para facilitar su manejo y escalabilidad
 const socialLinks = [
-  { href: "https://github.com/hqasmei", icon: AiOutlineGithub },
-  { href: "https://www.linkedin.com/in/hosnaqasmei/", icon: AiOutlineLinkedin },
-  { href: "https://www.youtube.com/channel/UCQBMkSDgbxDb8usMeXmOZyA", icon: AiOutlineYoutube },
+  { href: "https://www.instagram.com/canallaneza/", icon: AiOutlineInstagram },
+  { href: "https://www.facebook.com/CANALLANEZA/", icon: AiOutlineFacebook },
 ];
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
       <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
       <div className="p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
         <div className="text-neutral-500 dark:text-neutral-100">
-          © {currentYear} Carlos Armando Boyzo Oregón
+        <sup>©</sup> {currentYear} Canalla Neza
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
           {socialLinks.map(({ href, icon: Icon }) => (
