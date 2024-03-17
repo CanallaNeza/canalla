@@ -1,6 +1,6 @@
-
 ## canalla
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0d4fa900-0d7c-4011-a726-c2331c1ed9f4/deploy-status)](https://app.netlify.com/sites/canallaneza/deploys)
 
 Fork or download the repo and change whatever you need to change for your needs.
 
@@ -13,9 +13,7 @@ npm install
 npm run dev
 ```
 
-  * 18.18.2 (Currently using 64-bit executable)  
-
-  
 ```bash
-  * 18.18.2 (Currently using 64-bit executable)  
-```# canalla
+  * 18.18.2 (Currently using 64-bit executable)
+``
+```
