@@ -1,35 +1,27 @@
 // generate-sitemaps.mjs
-
 import fs from 'fs';
-import { globby } from 'globby';
 
-(async () => {
-  const pages = await globby([
-    'pages/**/*.tsx',
-    '!pages/_*.tsx',
-    '!pages/api',
-    // Añade o elimina patrones según las necesidades de tu proyecto
-  ]);
-  console.log(pages);
-  const sitemap = `
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${pages
-        .map((page) => {
-          const path = page
-            .replace('pages/', '')
-            .replace('.tsx', '')
-            .replace('/index', '');
-          const route = path === 'index' ? '' : path;
-          return `
-            <url>
-              <loc>${`https://canallaneza.art${route}`}</loc>
-            </url>
-          `;
-        })
-        .join('')}
-    </urlset>
-  `;
+// Definir explícitamente las rutas de los componentes que quieres incluir en el sitemap
+const routes = [
+  '/',
+  '/about', // Asumiendo que podrías tener una ruta /about, ajusta según tu necesidad
+  '/projects', // Asumiendo /projects, ajusta según tu necesidad
+  // Añade aquí otras rutas según las necesidades de tu proyecto
+];
 
-  fs.writeFileSync('public/sitemap.xml', sitemap);
-})();
+const sitemap = `
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${routes
+    .map((route) => {
+      return `
+        <url>
+          <loc>https://canallaneza.art${route}</loc>
+        </url>
+      `;
+    })
+    .join('')}
+</urlset>
+`;
+
+fs.writeFileSync('public/sitemap.xml', sitemap);
