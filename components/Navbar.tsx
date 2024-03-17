@@ -65,9 +65,9 @@ export default function Navbar() {
               <Link to='home'>
                 <div className='container flex items-center space-x-2'>
                   <img
-                    src='/cbo-logo.png'
+                    src='/logo.png'
                     alt='CBO Logo'
-                    className='h-4 w-auto'
+                    className='h-6 w-auto'
                   />{' '}
                   {/* Reemplaza h2 con img */}
                 </div>
